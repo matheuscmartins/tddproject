@@ -41,9 +41,9 @@ public class BookingServiceTest {
 
         Assertions.assertEquals(days, 10);
     }
-    
+
     @Before //para ser executado antes de tudo
-    public void setup(){ //simula as datas a serem salvas
+    public void setUp(){ //simula as datas a serem salvas
         LocalDate checkIn = LocalDate.parse("2022-12-10");
         LocalDate checkOut = LocalDate.parse("2022-12-20");
         BookingModel bookingModel = new BookingModel("1","Matheus",checkIn, checkOut,2);

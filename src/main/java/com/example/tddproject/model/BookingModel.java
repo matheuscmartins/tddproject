@@ -1,13 +1,21 @@
 package com.example.tddproject.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
 
+@Entity
 public class BookingModel {
+    @Id
     private String id;
     private String reserveName;
     private LocalDate checkIn;
     private LocalDate checkOut;
     private int numberGuests;
+
+    public BookingModel() {
+    }
 
     public BookingModel(String id, String reserveName, LocalDate checkIn, LocalDate checkOut, int numberGuests) {
         this.id = id;
